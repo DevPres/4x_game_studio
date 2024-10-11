@@ -28,6 +28,7 @@ public partial class UIManager : Node2D
     {
         EndTurn.Invoke();
         generalUI.IncrementTurnCounter();
+        RefreshUI();
     }
 
     public void SetTerrainUI(Hex h)
@@ -46,6 +47,11 @@ public partial class UIManager : Node2D
         cityUI = cityUIScene.Instantiate() as CityUI;
         AddChild(cityUI);
         cityUI.SetCityUI(c);
+    }
+
+    public void RefreshUI()
+    {
+        if (cityUI is not null) cityUI.Refresh();
     }
 
     public void HideAllPopups()

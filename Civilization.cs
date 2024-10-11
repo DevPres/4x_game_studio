@@ -23,4 +23,12 @@ public class Civilization
         territoryColor = new Color(r.Next(255) / 255.0f, r.Next(255) / 255.0f, r.Next(255) / 255.0f);
     }
 
+    public void ProcessTurn()
+    {
+        foreach (City c in cities)
+        {
+            c.ProcessTurn();
+        }
+    }
+
 }
