@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsjkbq28lk4kf"]
+
+[ext_resource type="Script" path="res://UIManager.cs" id="1_ayb8k"]
+[ext_resource type="PackedScene" uid="uid://daccktu27b38t" path="res://GeneralUI.tscn" id="2_syno0"]
+
+[node name="UiManager" type="Node2D"]
+script = ExtResource("1_ayb8k")
+
+[node name="GeneralUI" parent="." instance=ExtResource("2_syno0")]
